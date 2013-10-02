@@ -1,8 +1,7 @@
 practice
 ========
 
-here's the idea: one or two practice exercises a day, every day, and they all
-go here.
+here's the idea: one or two practice exercises a day, every day.
 
 [read this][quantity_vs_quality].
 

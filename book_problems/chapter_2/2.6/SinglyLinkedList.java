@@ -322,6 +322,7 @@ public class SinglyLinkedList {
         }
     }
             
+    /*
     static class Node {
 
         int data;
@@ -332,5 +333,6 @@ public class SinglyLinkedList {
             next = null;
         }
     }
+    */
 
 }

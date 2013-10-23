@@ -288,6 +288,24 @@ public class SinglyLinkedList {
         }
     }
 
+    public void reverse() {
+        if (length() <= 1)
+            return;
+        Node a = head;
+        Node b = head.next;
+        recurse_reverse(a, b);
+        a.next = null;
+    }
+
+    public void recurse_reverse(Node a, Node b) {
+        if (b == null) {
+            head = a;
+            return;
+        }
+        recurse_reverse(a.next, b.next);
+        b.next = a;
+    }
+
     // O(n)
     public String toString() {
         if (length() == 0) {
@@ -303,7 +321,7 @@ public class SinglyLinkedList {
             return result;
         }
     }
-    /*        
+            
     static class Node {
 
         int data;
@@ -314,5 +332,5 @@ public class SinglyLinkedList {
             next = null;
         }
     }
-    */
+
 }

@@ -13,14 +13,10 @@ public class Main {
         blist.insertHead(4);
         blist.insertHead(20);
         System.out.println(list);
-        System.out.println(blist);
-        list.append(blist);
-        System.out.println(list);
-    
-        list.reverse();
-        
-        System.out.println(list);
 
+        list.reverseRecursively();
+    
+        System.out.println(list);
 
     }
 

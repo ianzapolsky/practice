@@ -12,69 +12,32 @@ struct node {
     struct node* next;
 };
 
-int length(struct node* head) {
-    int length = 0;
-    struct node* current = head;
-    
-    while (current != NULL) {
-        length += 1;
-        current = current->next;
+struct node* newNode(int data) {
+    struct node* newNode = (struct node*)malloc(sizeof(struct node));
+    newNode->data = data;
+    newNode->next = NULL;
+    return newNode;
+}
+
+void print(struct node** root) {
+    struct node* cur = *root;
+    while (cur != NULL) {
+        printf("%d,", cur->data);
+        cur = cur->next;
     }
-    return length;
+    printf("\n");
 }
 
-int count(struct node* head, int searchFor) {
-    int count = 0;
-    struct node* current = head;
-
-    while (current != NULL) {
-        if (current->data == searchFor)
-            count += 1;
-        current = current->next;
-    }
-    return count;
-}
-
-int getNth(struct node* head, int n) {
-    struct node* current = head;
-    while (n-- > 0)
-        current = current->next;
-    return current->data;
-}
-
-void push(struct node** headRef, int init_data) {
-    struct node* new_node = (struct node*)malloc(sizeof(struct node));
-    new_node->data = init_data;
-    new_node->next = *headRef;
-    *headRef = new_node;
-}
-
-int pop(struct node** headRef) {
-    struct node* head;
-    int result;
-
-    head = *headRef;
-    assert(head != NULL);
-    result = head->data;
-    *headRef = head->next;
-    free(head);
-    return result;
+struct node* insert(struct node** root, int data) {
+    struct node* n = newNode(data);
+    n->next = *root;
+    return n;
 }
 
 int main() {
-    struct node* head = (struct node*)malloc(sizeof(struct node));
-    head->data = 5;
-    head->next = NULL;
-
-    push(&head, 10);
-    push(&head, 5);
-    push(&head, 4);
-    push(&head, 2);
-    push(&head, 1);
-
-    printf("list[1] (should be 2) = %d\n", getNth(head,1));
-
     
-
+    struct node* root = newNode(10);
+    root = insert(&root, 4);
+    print(&root);
     return 0;
 }

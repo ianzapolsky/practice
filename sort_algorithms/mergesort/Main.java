@@ -3,6 +3,8 @@
 // Description: Mergesort algorithm implemented to sort an array.
 // Author: Ian Zapolsky (10/14/13)
 
+import java.util.Random;
+
 public class Main {
 
     // Merges the contents of arr1 and arr2 into a sorted ascending array.
@@ -48,10 +50,20 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        int[] test = {10,9,8,7,6,5,4,3,2,1};
+
+        System.out.print("ready... ");  
+
+        Random random = new Random();
+        int test[] = new int[10000000];
+        for (int i = 0; i < 10000000; i++)
+            test[i] = random.nextInt();
+        
+        System.out.println("go ->");
+  
         test = mergesort(test);
-        for (int i : test)
-            System.out.print(i+",");
+
+        System.out.println("done");
+  
     }
 }
 

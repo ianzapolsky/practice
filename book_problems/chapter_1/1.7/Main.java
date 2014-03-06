@@ -8,8 +8,8 @@ import java.util.ArrayList;
 
 public class Main {
 
-    // This algorithm first scans the entire matrix searching for 0s and
-    // flagging those columns and rows that contains 0s. It then goes back
+    // This algorithm first scans the entire matrix, searching for 0s and
+    // flagging the columns and rows that contain 0s. It then goes back
     // and zeroes out any flagged columns and rows.
     // O(n^2), O(1) --> doesn't use any space
 
@@ -25,6 +25,8 @@ public class Main {
                 if (matrix[row][col] == 0) {
                     rows.add(row);
                     cols.add(col);
+                    // could we add a break statement here to minimally improve
+                    // efficiency?
                 }
             }
         }

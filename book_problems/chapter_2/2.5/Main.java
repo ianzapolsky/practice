@@ -6,8 +6,6 @@
 // and returns the answer as another list.
 // Author: Ian Zapolsky (10/16/13)
 
-
-
 public class Main {
 
     public static int listToInt(SinglyLinkedList list) {

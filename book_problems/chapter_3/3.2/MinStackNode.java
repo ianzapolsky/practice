@@ -6,8 +6,8 @@
 
 public class MinStackNode {
     
-    public int min_below;
     public int data;
+    public int min_below;
     public MinStackNode next;
    
     public MinStackNode() { }

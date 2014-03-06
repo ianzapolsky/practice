@@ -42,7 +42,7 @@ public class Main {
 
     // We could improve efficiency by sorting (using quicksort or mergesort,
     // the O(nlogn) sorting algorithms) and then directly comparing them for
-    // equality. This would reduce the time complexity but almost increase the
+    // equality. This would reduce the time complexity but increase the
     // space complexity.
 
     public static void main(String[] args) {

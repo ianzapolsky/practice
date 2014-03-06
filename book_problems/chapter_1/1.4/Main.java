@@ -13,10 +13,9 @@ public class Main {
 
         // Eliminate trailing whitespace.
         int trail = str_chars.length-1;
-        while (str_chars[trail] == ' ') {
-            str_chars = str.substring(0, trail).toCharArray();
+        while (str_chars[trail] == ' ') 
             trail -= 1;
-        }
+        str_chars = str.substring(0, trail+1).toCharArray();
         
         // Replace all whitespace characters with "%20".
         for (char c : str_chars) {

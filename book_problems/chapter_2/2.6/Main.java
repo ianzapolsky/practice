@@ -12,6 +12,8 @@ public class Main {
         Node slow = list.head;
         Node fast = list.head;
 
+        // think about edge cases for 1 and 2-element lists
+
         slow = slow.next;
         fast = fast.next.next;
 
